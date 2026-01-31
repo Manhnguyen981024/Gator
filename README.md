@@ -1,4 +1,4 @@
-#Introduce 
+# Introduce 
 We're going to build an RSS feed aggregator in Go! We'll call it "Gator"
 It's a CLI tool that allows users to:
 - Add RSS feeds from across the internet to be collected
@@ -8,12 +8,12 @@ It's a CLI tool that allows users to:
 
 RSS feeds are a way for websites to publish updates to their content. You can use this project to keep up with your favorite blogs, news sites, podcasts, and more!
 
-#Learning Goals
+# Learning Goals
 Learn how to integrate a Go application with a PostgreSQL database
 Practice using your SQL skills to query and migrate a database (using sqlc and goose, two lightweight tools for typesafe SQL in Go)
 Learn how to write a long-running service that continuously fetches new posts from RSS feeds and stores them in the database
 
-#Commands:
+# Commands:
 - gator login - sets the current user in the config
 - gator register - adds a new user to the database
 - gator users - lists all the users in the database
@@ -27,7 +27,7 @@ Learn how to write a long-running service that continuously fetches new posts fr
 - gator unfollow - unfollow a feed from user
 - gator browse - show all posts of a user
 
-#install
+# install
 ## Tech Stack
 - Go 1.25+
 - PostgreSQL
@@ -36,7 +36,7 @@ Learn how to write a long-running service that continuously fetches new posts fr
 - goose 
 - sqlc
 
-#Config
+# Config
 We'll use a single JSON file to keep track of two things:
 - Who is currently logged in
 - The connection credentials for the PostgreSQL database
@@ -49,13 +49,13 @@ We'll use a single JSON file to keep track of two things:
 }
 `
 
-#install postgresql
+# install postgresql
 ```
 sudo apt update
 sudo apt install postgresql postgresql-contrib
 ```
 
-#Goose Migrations
+# Goose Migrations
 `go install github.com/pressly/goose/v3/cmd/goose@latest`
 
 - Up one migration
@@ -64,6 +64,6 @@ sudo apt install postgresql postgresql-contrib
 - Down one migration
 `goose postgres <connection_string> down`
 
-#Install sqlc
+# Install sqlc
 `go install github.com/sqlc-dev/sqlc/cmd/sqlc@latest`
 
